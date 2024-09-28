@@ -1,6 +1,8 @@
 package com.example.wanlok_dummy_android;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,12 +36,15 @@ public class MainActivity extends AppCompatActivity {
         btnDatePicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         tvSelectedDate.setText(year + "/" + String.format("%02d", month + 1) + "/" + day);
                     }
-                }, year, month, day).show();
+                }, year, month, day);
+                datePickerDialog.show();
+                datePickerDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLUE);
+                datePickerDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.GREEN);
             }
         });
     }
