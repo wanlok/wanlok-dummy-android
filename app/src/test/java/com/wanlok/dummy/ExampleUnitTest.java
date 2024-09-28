@@ -1,4 +1,4 @@
-package com.example.wanlok_dummy_android;
+package com.wanlok.dummy;
 
 import org.junit.Test;
 

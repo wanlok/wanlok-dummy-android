@@ -1,4 +1,4 @@
-package com.example.wanlok_dummy_android;
+package com.wanlok.dummy;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.wanlok_dummy_android.R;
 
 import java.util.Calendar;
 
